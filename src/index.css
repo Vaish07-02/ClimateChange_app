@@ -1,0 +1,101 @@
+:root {
+  --sky-top: #5ba3e8;
+  --sky-mid: #7c9fd4;
+  --sky-mid2: #9b8fce;
+  --sky-bottom: #c9a8c9;
+  --sky-low: #e8c4d8;
+
+  --glass-dark: rgba(30, 45, 75, 0.55);
+  --glass-light: rgba(60, 80, 120, 0.45);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --glass-hover: rgba(50, 70, 110, 0.6);
+
+  --text-primary: #ffffff;
+  --text-muted: rgba(255, 255, 255, 0.85);
+  --text-soft: rgba(255, 255, 255, 0.75);
+
+  --header-bar: #6ba3d4;
+  --accent: #7eb8e8;
+  --accent-soft: rgba(255, 255, 255, 0.25);
+  --radius: 16px;
+  --font: 'Outfit', system-ui, sans-serif;
+  --base-size: 22px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font);
+  font-size: var(--base-size);
+  min-height: 100vh;
+  line-height: 1.6;
+  color: var(--text-primary);
+  background: #333;
+  /* Fallback */
+}
+
+/* Weather Themes */
+body.theme-default,
+body.theme-storm {
+  background:
+    /* Green Field (Bottom) */
+    linear-gradient(rgba(0, 0, 0, 0) 75%, #2e7d32 75%, #1b5e20 100%),
+    /* Road/Path (Bottom center) */
+    radial-gradient(ellipse at 50% 100%, rgba(80, 80, 80, 0.4) 0%, transparent 60%),
+    /* Bright Sunlit Sky (Right) */
+    radial-gradient(circle at 90% 20%, #fffde7 0%, #fff59d 10%, #ffeb3b 20%, #4fc3f7 50%, #01579b 100%),
+    /* Dark Towering Storm Clouds (Left/Center) */
+    radial-gradient(circle at 30% 40%, #37474f 0%, #263238 40%, rgba(38, 50, 56, 0.9) 70%, transparent 100%),
+    radial-gradient(circle at 10% 60%, #455a64 0%, #37474f 50%, transparent 100%),
+    /* Top Sky Fill */
+    linear-gradient(200deg, #81d4fa 0%, #4fc3f7 30%, #0288d1 100%);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+body.theme-clear {
+  background: radial-gradient(circle at 70% 20%, #ffeb3b 0%, #4fc3f7 40%, #0288d1 100%);
+}
+
+body.theme-clouds {
+  background: linear-gradient(180deg, #90a4ae 0%, #cfd8dc 50%, #90a4ae 100%);
+}
+
+body.theme-rain {
+  background:
+    linear-gradient(rgba(0, 30, 60, 0.4), rgba(0, 30, 60, 0.4)),
+    radial-gradient(circle at 50% 100%, #2e7d32 0%, #1b5e20 40%, #263238 100%);
+  background-blend-mode: overlay;
+}
+
+/* theme-storm now alias for theme-default above */
+
+body.theme-snow {
+  background: radial-gradient(circle at 50% 50%, #ffffff 0%, #e1f5fe 40%, #b3e5fc 100%);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+input {
+  font-family: inherit;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}

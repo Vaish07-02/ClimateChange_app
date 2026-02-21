@@ -1,0 +1,215 @@
+.page {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem 4rem;
+  background: transparent;
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: 900;
+  margin-bottom: 2rem;
+  color: #fff;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.section {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: var(--radius);
+  padding: 2.5rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.sectionHeaderRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.sectionTitle {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.muted {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.list {
+  list-style: none;
+}
+
+.listItem {
+  margin-bottom: 0.5rem;
+}
+
+.historyButton {
+  width: 100%;
+  text-align: left;
+  padding: 0.75rem 1rem;
+  background: var(--glass-dark);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1rem;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.historyButton:hover {
+  background: var(--glass-hover);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.historyName {
+  font-weight: 500;
+  color: #fff;
+}
+
+.historyTemp {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.historyDesc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-transform: capitalize;
+}
+
+.refreshBtn {
+  padding: 0.4rem 0.75rem;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--glass-border);
+  border-radius: 8px;
+  color: #000;
+  font-size: 0.85rem;
+}
+
+.refreshBtn:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.clearBtn {
+  margin-top: 0.75rem;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.clearBtn:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.formRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.input {
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 999px;
+  background: rgba(75, 85, 99, 0.8);
+  backdrop-filter: blur(8px);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  min-width: 140px;
+  outline: none;
+}
+
+.button {
+  padding: 0.75rem 1.25rem;
+  border: none;
+  border-radius: 999px;
+  background: rgba(45, 55, 72, 0.85);
+  backdrop-filter: blur(8px);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.button:hover:not(:disabled) {
+  background: rgba(45, 55, 72, 1);
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.error {
+  margin-top: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: rgba(217, 70, 239, 0.7);
+  backdrop-filter: blur(8px);
+  border: none;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.subscriptionMessage {
+  margin-top: 0.75rem;
+  padding: 0.85rem 1rem;
+  background: rgba(139, 69, 85, 0.6);
+  backdrop-filter: blur(8px);
+  border: none;
+  border-radius: 12px;
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.historyCard {
+  margin-top: 1rem;
+  padding: 1.25rem;
+  background: var(--glass-light);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  color: #fff;
+}
+
+.historyCard h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.tempGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
